@@ -22,6 +22,9 @@ public class Person {
     @Min(value = 1900, message = "year of birth must be more 1900")
     private int yearOfBirth;
 
+    @Column(name = "role")
+    private String role;
+
     @Column(name = "password")
     private String password;
 
@@ -32,6 +35,14 @@ public class Person {
     public Person(String username, int yearOfBirth) {
         this.username = username;
         this.yearOfBirth = yearOfBirth;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getUsername() {
